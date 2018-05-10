@@ -3,14 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**medal_id** | **Integer** | medal_id integer | 
-**title** | **String** | title string | 
-**description** | **String** | description string | 
 **corporation_id** | **Integer** | corporation_id integer | 
-**issuer_id** | **Integer** | issuer_id integer | 
 **date** | **DateTime** | date string | 
+**description** | **String** | description string | 
+**graphics** | [**Array&lt;GetCharactersCharacterIdMedalsGraphic&gt;**](GetCharactersCharacterIdMedalsGraphic.md) | graphics array | 
+**issuer_id** | **Integer** | issuer_id integer | 
+**medal_id** | **Integer** | medal_id integer | 
 **reason** | **String** | reason string | 
 **status** | **String** | status string | 
-**graphics** | [**Array&lt;GetCharactersCharacterIdMedalsGraphic&gt;**](GetCharactersCharacterIdMedalsGraphic.md) | graphics array | 
+**title** | **String** | title string | 
 
 

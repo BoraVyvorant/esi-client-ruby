@@ -1,6 +1,6 @@
 # ESI::UniverseApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -52,6 +52,7 @@ api_instance = ESI::UniverseApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   language: "en-us", # String | Language to use in the response
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -71,6 +72,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **language** | **String**| Language to use in the response | [optional] [default to en-us]
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -85,7 +87,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -108,6 +110,7 @@ asteroid_belt_id = 56 # Integer | asteroid_belt_id integer
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -127,6 +130,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **asteroid_belt_id** | **Integer**| asteroid_belt_id integer | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -140,7 +144,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -161,6 +165,7 @@ api_instance = ESI::UniverseApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   language: "en-us", # String | Language to use in the response
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -180,6 +185,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **language** | **String**| Language to use in the response | [optional] [default to en-us]
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -194,7 +200,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -215,6 +221,7 @@ api_instance = ESI::UniverseApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -233,6 +240,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -246,7 +254,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -269,6 +277,7 @@ category_id = 56 # Integer | An Eve item category ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   language: "en-us", # String | Language to use in the response
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -289,6 +298,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **category_id** | **Integer**| An Eve item category ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **language** | **String**| Language to use in the response | [optional] [default to en-us]
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -303,7 +313,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -324,6 +334,7 @@ api_instance = ESI::UniverseApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -342,6 +353,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -355,7 +367,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -378,6 +390,7 @@ constellation_id = 56 # Integer | constellation_id integer
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   language: "en-us", # String | Language to use in the response
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -398,6 +411,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **constellation_id** | **Integer**| constellation_id integer | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **language** | **String**| Language to use in the response | [optional] [default to en-us]
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -412,7 +426,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -433,6 +447,7 @@ api_instance = ESI::UniverseApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   language: "en-us", # String | Language to use in the response
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -452,6 +467,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **language** | **String**| Language to use in the response | [optional] [default to en-us]
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -466,7 +482,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -487,6 +503,7 @@ api_instance = ESI::UniverseApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -505,6 +522,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -518,7 +536,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -541,6 +559,7 @@ graphic_id = 56 # Integer | graphic_id integer
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -560,6 +579,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **graphic_id** | **Integer**| graphic_id integer | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -573,7 +593,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -594,6 +614,7 @@ api_instance = ESI::UniverseApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -613,6 +634,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -627,7 +649,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -650,6 +672,7 @@ group_id = 56 # Integer | An Eve item group ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   language: "en-us", # String | Language to use in the response
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -670,6 +693,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **Integer**| An Eve item group ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **language** | **String**| Language to use in the response | [optional] [default to en-us]
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -684,7 +708,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -707,6 +731,7 @@ moon_id = 56 # Integer | moon_id integer
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -726,6 +751,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **moon_id** | **Integer**| moon_id integer | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -739,7 +765,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -762,6 +788,7 @@ planet_id = 56 # Integer | planet_id integer
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -781,6 +808,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **planet_id** | **Integer**| planet_id integer | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -794,7 +822,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -815,6 +843,7 @@ api_instance = ESI::UniverseApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   language: "en-us", # String | Language to use in the response
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -834,6 +863,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **language** | **String**| Language to use in the response | [optional] [default to en-us]
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -848,7 +878,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -869,6 +899,7 @@ api_instance = ESI::UniverseApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -887,6 +918,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -900,7 +932,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -923,6 +955,7 @@ region_id = 56 # Integer | region_id integer
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   language: "en-us", # String | Language to use in the response
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -943,6 +976,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **region_id** | **Integer**| region_id integer | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **language** | **String**| Language to use in the response | [optional] [default to en-us]
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -957,7 +991,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -980,6 +1014,7 @@ stargate_id = 56 # Integer | stargate_id integer
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -999,6 +1034,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **stargate_id** | **Integer**| stargate_id integer | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -1012,7 +1048,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -1035,6 +1071,7 @@ star_id = 56 # Integer | star_id integer
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -1054,6 +1091,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **star_id** | **Integer**| star_id integer | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -1067,7 +1105,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -1077,7 +1115,7 @@ No authorization required
 
 Get station information
 
-Get information on a station  ---  This route is cached for up to 300 seconds
+Get information on a station  ---  This route expires daily at 11:05
 
 ### Example
 ```ruby
@@ -1090,6 +1128,7 @@ station_id = 56 # Integer | station_id integer
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -1109,6 +1148,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **station_id** | **Integer**| station_id integer | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -1122,7 +1162,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -1143,6 +1183,7 @@ api_instance = ESI::UniverseApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -1161,6 +1202,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -1174,7 +1216,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -1202,6 +1244,7 @@ structure_id = 789 # Integer | An Eve structure ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -1222,6 +1265,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **structure_id** | **Integer**| An Eve structure ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -1236,7 +1280,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -1257,6 +1301,7 @@ api_instance = ESI::UniverseApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -1275,6 +1320,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -1288,7 +1334,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -1309,6 +1355,7 @@ api_instance = ESI::UniverseApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -1327,6 +1374,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -1340,7 +1388,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -1361,6 +1409,7 @@ api_instance = ESI::UniverseApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -1379,6 +1428,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -1392,7 +1442,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -1415,6 +1465,7 @@ system_id = 56 # Integer | system_id integer
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   language: "en-us", # String | Language to use in the response
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -1435,6 +1486,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **system_id** | **Integer**| system_id integer | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **language** | **String**| Language to use in the response | [optional] [default to en-us]
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -1449,7 +1501,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -1470,6 +1522,7 @@ api_instance = ESI::UniverseApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -1489,6 +1542,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -1503,7 +1557,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -1526,6 +1580,7 @@ type_id = 56 # Integer | An Eve item type ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   language: "en-us", # String | Language to use in the response
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -1546,6 +1601,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **type_id** | **Integer**| An Eve item type ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **language** | **String**| Language to use in the response | [optional] [default to en-us]
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -1560,7 +1616,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -1617,7 +1673,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -1672,7 +1728,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 

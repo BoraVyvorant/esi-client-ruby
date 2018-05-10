@@ -1,6 +1,6 @@
 # ESI::ContractsApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -35,6 +35,7 @@ character_id = 56 # Integer | An EVE character ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
@@ -56,6 +57,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **character_id** | **Integer**| An EVE character ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
@@ -71,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -101,6 +103,7 @@ contract_id = 56 # Integer | ID of a contract
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -122,6 +125,7 @@ Name | Type | Description  | Notes
  **character_id** | **Integer**| An EVE character ID | 
  **contract_id** | **Integer**| ID of a contract | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -136,7 +140,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -166,6 +170,7 @@ contract_id = 56 # Integer | ID of a contract
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -187,6 +192,7 @@ Name | Type | Description  | Notes
  **character_id** | **Integer**| An EVE character ID | 
  **contract_id** | **Integer**| ID of a contract | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -201,13 +207,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **get_corporations_corporation_id_contracts**
-> Array&lt;GetCorporationsCorporationIdContracts200Ok&gt; get_corporations_corporation_id_contracts(corporation_id, , opts)
+> Array&lt;GetCorporationsCorporationIdContracts200Ok&gt; get_corporations_corporation_id_contracts(corporation_id, opts)
 
 Get coporation contracts
 
@@ -229,6 +235,7 @@ corporation_id = 56 # Integer | An EVE corporation ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
@@ -237,7 +244,7 @@ opts = {
 
 begin
   #Get coporation contracts
-  result = api_instance.get_corporations_corporation_id_contracts(corporation_id, , opts)
+  result = api_instance.get_corporations_corporation_id_contracts(corporation_id, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling ContractsApi->get_corporations_corporation_id_contracts: #{e}"
@@ -250,6 +257,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporation_id** | **Integer**| An EVE corporation ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
@@ -265,13 +273,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **get_corporations_corporation_id_contracts_contract_id_bids**
-> Array&lt;GetCorporationsCorporationIdContractsContractIdBids200Ok&gt; get_corporations_corporation_id_contracts_contract_id_bids(contract_id, corporation_id, , opts)
+> Array&lt;GetCorporationsCorporationIdContractsContractIdBids200Ok&gt; get_corporations_corporation_id_contracts_contract_id_bids(contract_id, corporation_id, opts)
 
 Get corporation contract bids
 
@@ -295,6 +303,7 @@ corporation_id = 56 # Integer | An EVE corporation ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
@@ -303,7 +312,7 @@ opts = {
 
 begin
   #Get corporation contract bids
-  result = api_instance.get_corporations_corporation_id_contracts_contract_id_bids(contract_id, corporation_id, , opts)
+  result = api_instance.get_corporations_corporation_id_contracts_contract_id_bids(contract_id, corporation_id, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling ContractsApi->get_corporations_corporation_id_contracts_contract_id_bids: #{e}"
@@ -317,6 +326,7 @@ Name | Type | Description  | Notes
  **contract_id** | **Integer**| ID of a contract | 
  **corporation_id** | **Integer**| An EVE corporation ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
@@ -332,13 +342,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **get_corporations_corporation_id_contracts_contract_id_items**
-> Array&lt;GetCorporationsCorporationIdContractsContractIdItems200Ok&gt; get_corporations_corporation_id_contracts_contract_id_items(contract_id, corporation_id, , opts)
+> Array&lt;GetCorporationsCorporationIdContractsContractIdItems200Ok&gt; get_corporations_corporation_id_contracts_contract_id_items(contract_id, corporation_id, opts)
 
 Get corporation contract items
 
@@ -362,6 +372,7 @@ corporation_id = 56 # Integer | An EVE corporation ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -369,7 +380,7 @@ opts = {
 
 begin
   #Get corporation contract items
-  result = api_instance.get_corporations_corporation_id_contracts_contract_id_items(contract_id, corporation_id, , opts)
+  result = api_instance.get_corporations_corporation_id_contracts_contract_id_items(contract_id, corporation_id, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling ContractsApi->get_corporations_corporation_id_contracts_contract_id_items: #{e}"
@@ -383,6 +394,7 @@ Name | Type | Description  | Notes
  **contract_id** | **Integer**| ID of a contract | 
  **corporation_id** | **Integer**| An EVE corporation ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -397,7 +409,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 

@@ -1,6 +1,6 @@
 # ESI::StatusApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -23,6 +23,7 @@ api_instance = ESI::StatusApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -41,6 +42,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -54,7 +56,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 

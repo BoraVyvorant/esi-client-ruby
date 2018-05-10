@@ -1,6 +1,6 @@
 # ESI::MarketApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -40,6 +40,7 @@ character_id = 56 # Integer | An EVE character ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -60,6 +61,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **character_id** | **Integer**| An EVE character ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -74,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -102,6 +104,7 @@ character_id = 56 # Integer | An EVE character ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
@@ -123,6 +126,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **character_id** | **Integer**| An EVE character ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
@@ -138,13 +142,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **get_corporations_corporation_id_orders**
-> Array&lt;GetCorporationsCorporationIdOrders200Ok&gt; get_corporations_corporation_id_orders(corporation_id, , opts)
+> Array&lt;GetCorporationsCorporationIdOrders200Ok&gt; get_corporations_corporation_id_orders(corporation_id, opts)
 
 List open orders from a corporation
 
@@ -166,6 +170,7 @@ corporation_id = 56 # Integer | An EVE corporation ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
@@ -174,7 +179,7 @@ opts = {
 
 begin
   #List open orders from a corporation
-  result = api_instance.get_corporations_corporation_id_orders(corporation_id, , opts)
+  result = api_instance.get_corporations_corporation_id_orders(corporation_id, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling MarketApi->get_corporations_corporation_id_orders: #{e}"
@@ -187,6 +192,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporation_id** | **Integer**| An EVE corporation ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
@@ -202,13 +208,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **get_corporations_corporation_id_orders_history**
-> Array&lt;GetCorporationsCorporationIdOrdersHistory200Ok&gt; get_corporations_corporation_id_orders_history(corporation_id, , opts)
+> Array&lt;GetCorporationsCorporationIdOrdersHistory200Ok&gt; get_corporations_corporation_id_orders_history(corporation_id, opts)
 
 List historical orders from a corporation
 
@@ -230,6 +236,7 @@ corporation_id = 56 # Integer | An EVE corporation ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
@@ -238,7 +245,7 @@ opts = {
 
 begin
   #List historical orders from a corporation
-  result = api_instance.get_corporations_corporation_id_orders_history(corporation_id, , opts)
+  result = api_instance.get_corporations_corporation_id_orders_history(corporation_id, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling MarketApi->get_corporations_corporation_id_orders_history: #{e}"
@@ -251,6 +258,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporation_id** | **Integer**| An EVE corporation ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
@@ -266,7 +274,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -287,6 +295,7 @@ api_instance = ESI::MarketApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -305,6 +314,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -318,7 +328,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -341,6 +351,7 @@ market_group_id = 56 # Integer | An Eve item group ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   language: "en-us", # String | Language to use in the response
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -361,6 +372,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **market_group_id** | **Integer**| An Eve item group ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **language** | **String**| Language to use in the response | [optional] [default to en-us]
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -375,7 +387,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -396,6 +408,7 @@ api_instance = ESI::MarketApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -414,6 +427,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -427,7 +441,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -437,7 +451,7 @@ No authorization required
 
 List historical market statistics in a region
 
-Return a list of historical market statistics for the specified type in a region  ---  This route is cached for up to 3600 seconds
+Return a list of historical market statistics for the specified type in a region  ---  This route expires daily at 11:05
 
 ### Example
 ```ruby
@@ -452,6 +466,7 @@ type_id = 56 # Integer | Return statistics for this type
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -472,6 +487,7 @@ Name | Type | Description  | Notes
  **region_id** | **Integer**| Return statistics in this region | 
  **type_id** | **Integer**| Return statistics for this type | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -485,7 +501,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -510,6 +526,7 @@ region_id = 56 # Integer | Return orders in this region
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
   type_id: 56, # Integer | Return orders only for this type
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
@@ -532,6 +549,7 @@ Name | Type | Description  | Notes
  **order_type** | **String**| Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and sell orders. | [default to all]
  **region_id** | **Integer**| Return orders in this region | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **type_id** | **Integer**| Return orders only for this type | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
@@ -547,7 +565,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -570,6 +588,7 @@ region_id = 56 # Integer | Return statistics in this region
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
@@ -590,6 +609,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **region_id** | **Integer**| Return statistics in this region | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
@@ -604,7 +624,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -632,6 +652,7 @@ structure_id = 789 # Integer | Return orders in this structure
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
@@ -653,6 +674,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **structure_id** | **Integer**| Return orders in this structure | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
@@ -668,7 +690,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 

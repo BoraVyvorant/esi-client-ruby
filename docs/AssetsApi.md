@@ -1,6 +1,6 @@
 # ESI::AssetsApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -35,6 +35,7 @@ character_id = 56 # Integer | An EVE character ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
@@ -56,6 +57,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **character_id** | **Integer**| An EVE character ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
@@ -71,13 +73,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **get_corporations_corporation_id_assets**
-> Array&lt;GetCorporationsCorporationIdAssets200Ok&gt; get_corporations_corporation_id_assets(corporation_id, , opts)
+> Array&lt;GetCorporationsCorporationIdAssets200Ok&gt; get_corporations_corporation_id_assets(corporation_id, opts)
 
 Get corporation assets
 
@@ -99,6 +101,7 @@ corporation_id = 56 # Integer | An EVE corporation ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
@@ -107,7 +110,7 @@ opts = {
 
 begin
   #Get corporation assets
-  result = api_instance.get_corporations_corporation_id_assets(corporation_id, , opts)
+  result = api_instance.get_corporations_corporation_id_assets(corporation_id, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling AssetsApi->get_corporations_corporation_id_assets: #{e}"
@@ -120,6 +123,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporation_id** | **Integer**| An EVE corporation ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
@@ -135,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -200,7 +204,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -265,13 +269,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **post_corporations_corporation_id_assets_locations**
-> Array&lt;PostCorporationsCorporationIdAssetsLocations200Ok&gt; post_corporations_corporation_id_assets_locations(corporation_id, item_ids, opts)
+> Array&lt;PostCorporationsCorporationIdAssetsLocations200Ok&gt; post_corporations_corporation_id_assets_locations(corporation_iditem_ids, opts)
 
 Get corporation asset locations
 
@@ -302,7 +306,7 @@ opts = {
 
 begin
   #Get corporation asset locations
-  result = api_instance.post_corporations_corporation_id_assets_locations(corporation_id, item_ids, opts)
+  result = api_instance.post_corporations_corporation_id_assets_locations(corporation_iditem_ids, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling AssetsApi->post_corporations_corporation_id_assets_locations: #{e}"
@@ -330,13 +334,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **post_corporations_corporation_id_assets_names**
-> Array&lt;PostCorporationsCorporationIdAssetsNames200Ok&gt; post_corporations_corporation_id_assets_names(corporation_id, item_ids, opts)
+> Array&lt;PostCorporationsCorporationIdAssetsNames200Ok&gt; post_corporations_corporation_id_assets_names(corporation_iditem_ids, opts)
 
 Get coporation asset names
 
@@ -367,7 +371,7 @@ opts = {
 
 begin
   #Get coporation asset names
-  result = api_instance.post_corporations_corporation_id_assets_names(corporation_id, item_ids, opts)
+  result = api_instance.post_corporations_corporation_id_assets_names(corporation_iditem_ids, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling AssetsApi->post_corporations_corporation_id_assets_names: #{e}"
@@ -395,7 +399,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 

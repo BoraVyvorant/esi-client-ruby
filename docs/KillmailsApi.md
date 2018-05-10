@@ -1,6 +1,6 @@
 # ESI::KillmailsApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -32,6 +32,7 @@ character_id = 56 # Integer | An EVE character ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   max_count: 50, # Integer | How many killmails to return at maximum
   max_kill_id: 56, # Integer | Only return killmails with ID smaller than this. 
   token: "token_example", # String | Access token to use if unable to set a header
@@ -54,6 +55,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **character_id** | **Integer**| An EVE character ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **max_count** | **Integer**| How many killmails to return at maximum | [optional] [default to 50]
  **max_kill_id** | **Integer**| Only return killmails with ID smaller than this.  | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
@@ -70,13 +72,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **get_corporations_corporation_id_killmails_recent**
-> Array&lt;GetCorporationsCorporationIdKillmailsRecent200Ok&gt; get_corporations_corporation_id_killmails_recent(corporation_id, , opts)
+> Array&lt;GetCorporationsCorporationIdKillmailsRecent200Ok&gt; get_corporations_corporation_id_killmails_recent(corporation_id, opts)
 
 Get corporation kills and losses
 
@@ -98,6 +100,7 @@ corporation_id = 56 # Integer | An EVE corporation ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   max_kill_id: 56, # Integer | Only return killmails with ID smaller than this
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
@@ -106,7 +109,7 @@ opts = {
 
 begin
   #Get corporation kills and losses
-  result = api_instance.get_corporations_corporation_id_killmails_recent(corporation_id, , opts)
+  result = api_instance.get_corporations_corporation_id_killmails_recent(corporation_id, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling KillmailsApi->get_corporations_corporation_id_killmails_recent: #{e}"
@@ -119,6 +122,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporation_id** | **Integer**| An EVE corporation ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **max_kill_id** | **Integer**| Only return killmails with ID smaller than this | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
@@ -134,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -159,6 +163,7 @@ killmail_id = 56 # Integer | The killmail ID to be queried
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -179,6 +184,7 @@ Name | Type | Description  | Notes
  **killmail_hash** | **String**| The killmail hash for verification | 
  **killmail_id** | **Integer**| The killmail ID to be queried | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -192,7 +198,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 

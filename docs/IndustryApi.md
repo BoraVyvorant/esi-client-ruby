@@ -1,6 +1,6 @@
 # ESI::IndustryApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -37,6 +37,7 @@ character_id = 56 # Integer | An EVE character ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   include_completed: true, # BOOLEAN | Whether retrieve completed character industry jobs as well
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
@@ -58,6 +59,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **character_id** | **Integer**| An EVE character ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **include_completed** | **BOOLEAN**| Whether retrieve completed character industry jobs as well | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
@@ -73,7 +75,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -101,6 +103,7 @@ character_id = 56 # Integer | An EVE character ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
@@ -122,6 +125,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **character_id** | **Integer**| An EVE character ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
@@ -137,13 +141,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **get_corporation_corporation_id_mining_extractions**
-> Array&lt;GetCorporationCorporationIdMiningExtractions200Ok&gt; get_corporation_corporation_id_mining_extractions(corporation_id, , opts)
+> Array&lt;GetCorporationCorporationIdMiningExtractions200Ok&gt; get_corporation_corporation_id_mining_extractions(corporation_id, opts)
 
 Moon extraction timers
 
@@ -165,6 +169,7 @@ corporation_id = 56 # Integer | An EVE corporation ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
@@ -173,7 +178,7 @@ opts = {
 
 begin
   #Moon extraction timers
-  result = api_instance.get_corporation_corporation_id_mining_extractions(corporation_id, , opts)
+  result = api_instance.get_corporation_corporation_id_mining_extractions(corporation_id, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling IndustryApi->get_corporation_corporation_id_mining_extractions: #{e}"
@@ -186,6 +191,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporation_id** | **Integer**| An EVE corporation ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
@@ -201,13 +207,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **get_corporation_corporation_id_mining_observers**
-> Array&lt;GetCorporationCorporationIdMiningObservers200Ok&gt; get_corporation_corporation_id_mining_observers(corporation_id, , opts)
+> Array&lt;GetCorporationCorporationIdMiningObservers200Ok&gt; get_corporation_corporation_id_mining_observers(corporation_id, opts)
 
 Corporation mining observers
 
@@ -229,6 +235,7 @@ corporation_id = 56 # Integer | An EVE corporation ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
@@ -237,7 +244,7 @@ opts = {
 
 begin
   #Corporation mining observers
-  result = api_instance.get_corporation_corporation_id_mining_observers(corporation_id, , opts)
+  result = api_instance.get_corporation_corporation_id_mining_observers(corporation_id, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling IndustryApi->get_corporation_corporation_id_mining_observers: #{e}"
@@ -250,6 +257,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporation_id** | **Integer**| An EVE corporation ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
@@ -265,13 +273,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **get_corporation_corporation_id_mining_observers_observer_id**
-> Array&lt;GetCorporationCorporationIdMiningObserversObserverId200Ok&gt; get_corporation_corporation_id_mining_observers_observer_id(corporation_id, observer_id, opts)
+> Array&lt;GetCorporationCorporationIdMiningObserversObserverId200Ok&gt; get_corporation_corporation_id_mining_observers_observer_id(corporation_idobserver_id, opts)
 
 Observed corporation mining
 
@@ -295,6 +303,7 @@ observer_id = 789 # Integer | A mining observer id
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
   token: "token_example", # String | Access token to use if unable to set a header
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
@@ -303,7 +312,7 @@ opts = {
 
 begin
   #Observed corporation mining
-  result = api_instance.get_corporation_corporation_id_mining_observers_observer_id(corporation_id, observer_id, opts)
+  result = api_instance.get_corporation_corporation_id_mining_observers_observer_id(corporation_idobserver_id, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling IndustryApi->get_corporation_corporation_id_mining_observers_observer_id: #{e}"
@@ -317,6 +326,7 @@ Name | Type | Description  | Notes
  **corporation_id** | **Integer**| An EVE corporation ID | 
  **observer_id** | **Integer**| A mining observer id | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
@@ -332,13 +342,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
 
 # **get_corporations_corporation_id_industry_jobs**
-> Array&lt;GetCorporationsCorporationIdIndustryJobs200Ok&gt; get_corporations_corporation_id_industry_jobs(corporation_id, , opts)
+> Array&lt;GetCorporationsCorporationIdIndustryJobs200Ok&gt; get_corporations_corporation_id_industry_jobs(corporation_id, opts)
 
 List corporation industry jobs
 
@@ -360,6 +370,7 @@ corporation_id = 56 # Integer | An EVE corporation ID
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   include_completed: false, # BOOLEAN | Whether retrieve completed industry jobs as well
   page: 1, # Integer | Which page of results to return
   token: "token_example", # String | Access token to use if unable to set a header
@@ -369,7 +380,7 @@ opts = {
 
 begin
   #List corporation industry jobs
-  result = api_instance.get_corporations_corporation_id_industry_jobs(corporation_id, , opts)
+  result = api_instance.get_corporations_corporation_id_industry_jobs(corporation_id, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling IndustryApi->get_corporations_corporation_id_industry_jobs: #{e}"
@@ -382,6 +393,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporation_id** | **Integer**| An EVE corporation ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **include_completed** | **BOOLEAN**| Whether retrieve completed industry jobs as well | [optional] [default to false]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
@@ -398,7 +410,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -419,6 +431,7 @@ api_instance = ESI::IndustryApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -437,6 +450,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -450,7 +464,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 
@@ -471,6 +485,7 @@ api_instance = ESI::IndustryApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
   x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
@@ -489,6 +504,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
  **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
@@ -502,7 +518,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 

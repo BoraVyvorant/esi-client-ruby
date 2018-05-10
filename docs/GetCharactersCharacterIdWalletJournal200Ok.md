@@ -3,18 +3,18 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**date** | **DateTime** | Date and time of transaction | 
-**ref_id** | **Integer** | Unique journal reference ID | 
-**ref_type** | **String** | Transaction type, different type of transaction will populate different fields in &#x60;extra_info&#x60; Note: If you have an existing XML API application that is using ref_types, you will need to know which string ESI ref_type maps to which integer. You can use the following gist to see string-&gt;int mappings: https://gist.github.com/ccp-zoetrope/c03db66d90c2148724c06171bc52e0ec | 
-**first_party_id** | **Integer** | first_party_id integer | [optional] 
-**first_party_type** | **String** | first_party_type string | [optional] 
-**second_party_id** | **Integer** | second_party_id integer | [optional] 
-**second_party_type** | **String** | second_party_type string | [optional] 
-**amount** | **Float** | Transaction amount. Positive when value transferred to the first party. Negative otherwise | [optional] 
+**amount** | **Float** | The amount of ISK given or taken from the wallet as a result of the given transaction. Positive when ISK is deposited into the wallet and negative when ISK is withdrawn | [optional] 
 **balance** | **Float** | Wallet balance after transaction occurred | [optional] 
-**reason** | **String** | reason string | [optional] 
-**tax_receiver_id** | **Integer** | the corporation ID receiving any tax paid | [optional] 
-**tax** | **Float** | Tax amount received for tax related transactions | [optional] 
-**extra_info** | [**GetCharactersCharacterIdWalletJournalExtraInfo**](GetCharactersCharacterIdWalletJournalExtraInfo.md) |  | [optional] 
+**context_id** | **Integer** | An ID that gives extra context to the particular transaction. Because of legacy reasons the context is completely different per ref_type and means different things. It is also possible to not have a context_id | [optional] 
+**context_id_type** | **String** | The type of the given context_id if present | [optional] 
+**date** | **DateTime** | Date and time of transaction | 
+**description** | **String** | The reason for the transaction, mirrors what is seen in the client | 
+**first_party_id** | **Integer** | The id of the first party involved in the transaction. This attribute has no consistency and is different or non existant for particular ref_types. The description attribute will help make sense of what this attribute means. For more info about the given ID it can be dropped into the /universe/names/ ESI route to determine its type and name | [optional] 
+**id** | **Integer** | Unique journal reference ID | 
+**reason** | **String** | The user stated reason for the transaction. Only applies to some ref_types | [optional] 
+**ref_type** | **String** | The transaction type for the given transaction. Different transaction types will populate different attributes. Note: If you have an existing XML API application that is using ref_types, you will need to know which string ESI ref_type maps to which integer. You can look at the following file to see string-&gt;int mappings: https://github.com/ccpgames/eve-glue/blob/master/eve_glue/wallet_journal_ref.py | 
+**second_party_id** | **Integer** | The id of the second party involved in the transaction. This attribute has no consistency and is different or non existant for particular ref_types. The description attribute will help make sense of what this attribute means. For more info about the given ID it can be dropped into the /universe/names/ ESI route to determine its type and name | [optional] 
+**tax** | **Float** | Tax amount received. Only applies to tax related transactions | [optional] 
+**tax_receiver_id** | **Integer** | The corporation ID receiving any tax paid. Only applies to tax related transactions | [optional] 
 
 
