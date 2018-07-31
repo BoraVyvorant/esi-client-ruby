@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**get_fw_leaderboards_characters**](FactionWarfareApi.md#get_fw_leaderboards_characters) | **GET** /v1/fw/leaderboards/characters/ | List of the top pilots in faction warfare
 [**get_fw_leaderboards_corporations**](FactionWarfareApi.md#get_fw_leaderboards_corporations) | **GET** /v1/fw/leaderboards/corporations/ | List of the top corporations in faction warfare
 [**get_fw_stats**](FactionWarfareApi.md#get_fw_stats) | **GET** /v1/fw/stats/ | An overview of statistics about factions involved in faction warfare
-[**get_fw_systems**](FactionWarfareApi.md#get_fw_systems) | **GET** /v1/fw/systems/ | Ownership of faction warfare systems
+[**get_fw_systems**](FactionWarfareApi.md#get_fw_systems) | **GET** /v2/fw/systems/ | Ownership of faction warfare systems
 [**get_fw_wars**](FactionWarfareApi.md#get_fw_wars) | **GET** /v1/fw/wars/ | Data about which NPC factions are at war
 
 
@@ -38,9 +38,7 @@ character_id = 56 # Integer | An EVE character ID
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
@@ -60,8 +58,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -102,9 +98,7 @@ corporation_id = 56 # Integer | An EVE corporation ID
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
@@ -124,8 +118,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -159,8 +151,6 @@ api_instance = ESI::FactionWarfareApi.new
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
 
 begin
@@ -178,8 +168,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -213,8 +201,6 @@ api_instance = ESI::FactionWarfareApi.new
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
 
 begin
@@ -232,8 +218,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -267,8 +251,6 @@ api_instance = ESI::FactionWarfareApi.new
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
 
 begin
@@ -286,8 +268,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -321,8 +301,6 @@ api_instance = ESI::FactionWarfareApi.new
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
 
 begin
@@ -340,8 +318,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -363,7 +339,7 @@ No authorization required
 
 Ownership of faction warfare systems
 
-An overview of the current ownership of faction warfare solar systems  ---  This route is cached for up to 1800 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/fw/systems/)
+An overview of the current ownership of faction warfare solar systems  ---  This route is cached for up to 1800 seconds
 
 ### Example
 ```ruby
@@ -375,8 +351,6 @@ api_instance = ESI::FactionWarfareApi.new
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
 
 begin
@@ -394,8 +368,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -429,8 +401,6 @@ api_instance = ESI::FactionWarfareApi.new
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
 
 begin
@@ -448,8 +418,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 

@@ -17,7 +17,6 @@ Method | HTTP request | Description
 [**get_characters_character_id_standings**](CharacterApi.md#get_characters_character_id_standings) | **GET** /v1/characters/{character_id}/standings/ | Get standings
 [**get_characters_character_id_stats**](CharacterApi.md#get_characters_character_id_stats) | **GET** /v2/characters/{character_id}/stats/ | Yearly aggregate stats
 [**get_characters_character_id_titles**](CharacterApi.md#get_characters_character_id_titles) | **GET** /v1/characters/{character_id}/titles/ | Get character corporation titles
-[**get_characters_names**](CharacterApi.md#get_characters_names) | **GET** /v1/characters/names/ | Get character names
 [**post_characters_affiliation**](CharacterApi.md#post_characters_affiliation) | **POST** /v1/characters/affiliation/ | Character affiliation
 [**post_characters_character_id_cspa**](CharacterApi.md#post_characters_character_id_cspa) | **POST** /v4/characters/{character_id}/cspa/ | Calculate a CSPA charge cost
 
@@ -41,8 +40,6 @@ character_id = 56 # Integer | An EVE character ID
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
 
 begin
@@ -61,8 +58,6 @@ Name | Type | Description  | Notes
  **character_id** | **Integer**| An EVE character ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -103,9 +98,7 @@ character_id = 56 # Integer | An EVE character ID
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
@@ -125,8 +118,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -168,9 +159,7 @@ opts = {
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
@@ -191,8 +180,6 @@ Name | Type | Description  | Notes
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -228,8 +215,6 @@ character_id = 56 # Integer | An EVE character ID
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
 
 begin
@@ -248,8 +233,6 @@ Name | Type | Description  | Notes
  **character_id** | **Integer**| An EVE character ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -290,9 +273,7 @@ character_id = 56 # Integer | An EVE character ID
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
@@ -312,8 +293,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -354,9 +333,7 @@ character_id = 56 # Integer | An EVE character ID
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
@@ -376,8 +353,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -418,9 +393,7 @@ character_id = 56 # Integer | An EVE character ID
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
@@ -440,8 +413,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -482,9 +453,7 @@ character_id = 56 # Integer | An EVE character ID
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
@@ -504,8 +473,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -541,8 +508,6 @@ character_id = 56 # Integer | An EVE character ID
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
 
 begin
@@ -561,8 +526,6 @@ Name | Type | Description  | Notes
  **character_id** | **Integer**| An EVE character ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -603,9 +566,7 @@ character_id = 56 # Integer | An EVE character ID
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
@@ -625,8 +586,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -667,9 +626,7 @@ character_id = 56 # Integer | An EVE character ID
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
@@ -689,8 +646,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -731,9 +686,7 @@ character_id = 56 # Integer | An EVE character ID
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
@@ -753,8 +706,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -795,9 +746,7 @@ character_id = 56 # Integer | An EVE character ID
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
@@ -817,8 +766,6 @@ Name | Type | Description  | Notes
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -827,63 +774,6 @@ Name | Type | Description  | Notes
 ### Authorization
 
 [evesso](../README.md#evesso)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-
-# **get_characters_names**
-> Array&lt;GetCharactersNames200Ok&gt; get_characters_names(character_ids, opts)
-
-Get character names
-
-Resolve a set of character IDs to character names  ---  This route is cached for up to 3600 seconds
-
-### Example
-```ruby
-# load the gem
-require 'esi-client-bvv'
-
-api_instance = ESI::CharacterApi.new
-
-character_ids = [56] # Array<Integer> | A comma separated list of character IDs
-
-opts = { 
-  datasource: "tranquility", # String | The server name you would like data from
-  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
-}
-
-begin
-  #Get character names
-  result = api_instance.get_characters_names(character_ids, opts)
-  p result
-rescue ESI::ApiError => e
-  puts "Exception when calling CharacterApi->get_characters_names: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **character_ids** | [**Array&lt;Integer&gt;**](Integer.md)| A comma separated list of character IDs | 
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
- **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
-
-### Return type
-
-[**Array&lt;GetCharactersNames200Ok&gt;**](GetCharactersNames200Ok.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -910,9 +800,6 @@ characters = [ESI::Array<Integer>.new] # Array<Integer> | The character IDs to f
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
-  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
 
 begin
@@ -930,9 +817,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characters** | **Array&lt;Integer&gt;**| The character IDs to fetch affiliations for. All characters must exist, or none will be returned. | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
- **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -974,9 +858,7 @@ characters = [ESI::Array<Integer>.new] # Array<Integer> | The target characters 
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
@@ -996,8 +878,6 @@ Name | Type | Description  | Notes
  **characters** | **Array&lt;Integer&gt;**| The target characters to calculate the charge for | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 

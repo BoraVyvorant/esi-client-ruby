@@ -35,9 +35,7 @@ opts = {
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
@@ -58,8 +56,6 @@ Name | Type | Description  | Notes
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -101,9 +97,7 @@ opts = {
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
@@ -124,8 +118,6 @@ Name | Type | Description  | Notes
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -167,9 +159,7 @@ opts = {
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
@@ -190,8 +180,6 @@ Name | Type | Description  | Notes
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -233,9 +221,7 @@ opts = {
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
   page: 1, # Integer | Which page of results to return
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
@@ -256,8 +242,6 @@ Name | Type | Description  | Notes
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 

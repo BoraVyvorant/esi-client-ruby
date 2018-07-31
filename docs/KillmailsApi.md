@@ -4,17 +4,17 @@ All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_characters_character_id_killmails_recent**](KillmailsApi.md#get_characters_character_id_killmails_recent) | **GET** /v1/characters/{character_id}/killmails/recent/ | Get character kills and losses
-[**get_corporations_corporation_id_killmails_recent**](KillmailsApi.md#get_corporations_corporation_id_killmails_recent) | **GET** /v1/corporations/{corporation_id}/killmails/recent/ | Get corporation kills and losses
+[**get_characters_character_id_killmails_recent**](KillmailsApi.md#get_characters_character_id_killmails_recent) | **GET** /v1/characters/{character_id}/killmails/recent/ | Get a character&#39;s recent kills and losses
+[**get_corporations_corporation_id_killmails_recent**](KillmailsApi.md#get_corporations_corporation_id_killmails_recent) | **GET** /v1/corporations/{corporation_id}/killmails/recent/ | Get a corporation&#39;s recent kills and losses
 [**get_killmails_killmail_id_killmail_hash**](KillmailsApi.md#get_killmails_killmail_id_killmail_hash) | **GET** /v1/killmails/{killmail_id}/{killmail_hash}/ | Get a single killmail
 
 
 # **get_characters_character_id_killmails_recent**
 > Array&lt;GetCharactersCharacterIdKillmailsRecent200Ok&gt; get_characters_character_id_killmails_recent(character_id, opts)
 
-Get character kills and losses
+Get a character's recent kills and losses
 
-Return a list of character's recent kills and losses  ---  This route is cached for up to 120 seconds
+Return a list of a character's kills and losses going back 90 days  ---  This route is cached for up to 300 seconds
 
 ### Example
 ```ruby
@@ -33,15 +33,12 @@ character_id = 56 # Integer | An EVE character ID
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  max_count: 50, # Integer | How many killmails to return at maximum
-  max_kill_id: 56, # Integer | Only return killmails with ID smaller than this. 
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  page: 1, # Integer | Which page of results to return
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
-  #Get character kills and losses
+  #Get a character's recent kills and losses
   result = api_instance.get_characters_character_id_killmails_recent(character_id, opts)
   p result
 rescue ESI::ApiError => e
@@ -56,11 +53,8 @@ Name | Type | Description  | Notes
  **character_id** | **Integer**| An EVE character ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **max_count** | **Integer**| How many killmails to return at maximum | [optional] [default to 50]
- **max_kill_id** | **Integer**| Only return killmails with ID smaller than this.  | [optional] 
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -80,9 +74,9 @@ Name | Type | Description  | Notes
 # **get_corporations_corporation_id_killmails_recent**
 > Array&lt;GetCorporationsCorporationIdKillmailsRecent200Ok&gt; get_corporations_corporation_id_killmails_recent(corporation_id, opts)
 
-Get corporation kills and losses
+Get a corporation's recent kills and losses
 
-Get a list of corporation's recent kills and losses  ---  This route is cached for up to 300 seconds  --- Requires one of the following EVE corporation role(s): Director
+Get a list of a corporation's kills and losses going back 90 days  ---  This route is cached for up to 300 seconds  --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```ruby
@@ -101,14 +95,12 @@ corporation_id = 56 # Integer | An EVE corporation ID
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  max_kill_id: 56, # Integer | Only return killmails with ID smaller than this
-  token: "token_example", # String | Access token to use if unable to set a header
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
+  page: 1, # Integer | Which page of results to return
+  token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
-  #Get corporation kills and losses
+  #Get a corporation's recent kills and losses
   result = api_instance.get_corporations_corporation_id_killmails_recent(corporation_id, opts)
   p result
 rescue ESI::ApiError => e
@@ -123,10 +115,8 @@ Name | Type | Description  | Notes
  **corporation_id** | **Integer**| An EVE corporation ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **max_kill_id** | **Integer**| Only return killmails with ID smaller than this | [optional] 
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -164,8 +154,6 @@ killmail_id = 56 # Integer | The killmail ID to be queried
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  user_agent: "user_agent_example", # String | Client identifier, takes precedence over headers
-  x_user_agent: "x_user_agent_example" # String | Client identifier, takes precedence over User-Agent
 }
 
 begin
@@ -185,8 +173,6 @@ Name | Type | Description  | Notes
  **killmail_id** | **Integer**| The killmail ID to be queried | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
