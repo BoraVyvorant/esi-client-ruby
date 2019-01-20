@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_bookmarks**
-> Array&lt;GetCorporationsCorporationIdBookmarks200Ok&gt; get_corporations_corporation_id_bookmarks(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdBookmarks200Ok&gt; get_corporations_corporation_id_bookmarks(corporation_id, , opts)
 
 List corporation bookmarks
 
@@ -164,7 +164,7 @@ opts = {
 
 begin
   #List corporation bookmarks
-  result = api_instance.get_corporations_corporation_id_bookmarks(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_bookmarks(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling BookmarksApi->get_corporations_corporation_id_bookmarks: #{e}"
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_bookmarks_folders**
-> Array&lt;GetCorporationsCorporationIdBookmarksFolders200Ok&gt; get_corporations_corporation_id_bookmarks_folders(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdBookmarksFolders200Ok&gt; get_corporations_corporation_id_bookmarks_folders(corporation_id, , opts)
 
 List corporation bookmark folders
 
@@ -226,7 +226,7 @@ opts = {
 
 begin
   #List corporation bookmark folders
-  result = api_instance.get_corporations_corporation_id_bookmarks_folders(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_bookmarks_folders(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling BookmarksApi->get_corporations_corporation_id_bookmarks_folders: #{e}"

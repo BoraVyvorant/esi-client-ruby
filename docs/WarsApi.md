@@ -26,7 +26,7 @@ api_instance = ESI::WarsApi.new
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  max_war_id: 56 # Integer | Only return wars with ID smaller than this.
+  max_war_id: 56 # Integer | Only return wars with ID smaller than this
 }
 
 begin
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **max_war_id** | **Integer**| Only return wars with ID smaller than this. | [optional] 
+ **max_war_id** | **Integer**| Only return wars with ID smaller than this | [optional] 
 
 ### Return type
 

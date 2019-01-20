@@ -1119,6 +1119,7 @@ api_instance = ESI::UniverseApi.new
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
+  filter: "filter_example", # String | Only list public structures that have this service online
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 }
 
@@ -1136,6 +1137,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **filter** | **String**| Only list public structures that have this service online | [optional] 
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
 
 ### Return type
@@ -1534,7 +1536,7 @@ No authorization required
 
 Bulk names to IDs
 
-Resolve a set of names to IDs in the following categories: agents, alliances, characters, constellations, corporations factions, inventory_types, regions, stations, and systems. Only exact matches will be returned. All names searched for are cached for 12 hours.  --- 
+Resolve a set of names to IDs in the following categories: agents, alliances, characters, constellations, corporations factions, inventory_types, regions, stations, and systems. Only exact matches will be returned. All names searched for are cached for 12 hours  --- 
 
 ### Example
 ```ruby
@@ -1589,7 +1591,7 @@ No authorization required
 
 Get names and categories for a set of ID's
 
-Resolve a set of IDs to names and categories. Supported ID's for resolving are: Characters, Corporations, Alliances, Stations, Solar Systems, Constellations, Regions, Types.  --- 
+Resolve a set of IDs to names and categories. Supported ID's for resolving are: Characters, Corporations, Alliances, Stations, Solar Systems, Constellations, Regions, Types  --- 
 
 ### Example
 ```ruby

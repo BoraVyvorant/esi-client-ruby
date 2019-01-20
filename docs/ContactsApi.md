@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_contacts**
-> Array&lt;GetCorporationsCorporationIdContacts200Ok&gt; get_corporations_corporation_id_contacts(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdContacts200Ok&gt; get_corporations_corporation_id_contacts(corporation_id, , opts)
 
 Get corporation contacts
 
@@ -349,7 +349,7 @@ opts = {
 
 begin
   #Get corporation contacts
-  result = api_instance.get_corporations_corporation_id_contacts(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_contacts(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling ContactsApi->get_corporations_corporation_id_contacts: #{e}"
@@ -382,7 +382,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_contacts_labels**
-> Array&lt;GetCorporationsCorporationIdContactsLabels200Ok&gt; get_corporations_corporation_id_contacts_labels(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdContactsLabels200Ok&gt; get_corporations_corporation_id_contacts_labels(corporation_id, , opts)
 
 Get corporation contact labels
 
@@ -410,7 +410,7 @@ opts = {
 
 begin
   #Get corporation contact labels
-  result = api_instance.get_corporations_corporation_id_contacts_labels(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_contacts_labels(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling ContactsApi->get_corporations_corporation_id_contacts_labels: #{e}"

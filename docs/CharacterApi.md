@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**get_characters_character_id_corporationhistory**](CharacterApi.md#get_characters_character_id_corporationhistory) | **GET** /v1/characters/{character_id}/corporationhistory/ | Get corporation history
 [**get_characters_character_id_fatigue**](CharacterApi.md#get_characters_character_id_fatigue) | **GET** /v1/characters/{character_id}/fatigue/ | Get jump fatigue
 [**get_characters_character_id_medals**](CharacterApi.md#get_characters_character_id_medals) | **GET** /v1/characters/{character_id}/medals/ | Get medals
-[**get_characters_character_id_notifications**](CharacterApi.md#get_characters_character_id_notifications) | **GET** /v2/characters/{character_id}/notifications/ | Get character notifications
+[**get_characters_character_id_notifications**](CharacterApi.md#get_characters_character_id_notifications) | **GET** /v4/characters/{character_id}/notifications/ | Get character notifications
 [**get_characters_character_id_notifications_contacts**](CharacterApi.md#get_characters_character_id_notifications_contacts) | **GET** /v1/characters/{character_id}/notifications/contacts/ | Get new contact notifications
 [**get_characters_character_id_portrait**](CharacterApi.md#get_characters_character_id_portrait) | **GET** /v2/characters/{character_id}/portrait/ | Get character portraits
 [**get_characters_character_id_roles**](CharacterApi.md#get_characters_character_id_roles) | **GET** /v2/characters/{character_id}/roles/ | Get character corporation roles
@@ -494,7 +494,7 @@ Name | Type | Description  | Notes
 
 Get character portraits
 
-Get portrait urls for a character  ---  This route is cached for up to 3600 seconds
+Get portrait urls for a character  ---  This route expires daily at 11:05
 
 ### Example
 ```ruby
@@ -796,7 +796,7 @@ require 'esi-client-bvv'
 
 api_instance = ESI::CharacterApi.new
 
-characters = [ESI::Array<Integer>.new] # Array<Integer> | The character IDs to fetch affiliations for. All characters must exist, or none will be returned.
+characters = [ESI::Array<Integer>.new] # Array<Integer> | The character IDs to fetch affiliations for. All characters must exist, or none will be returned
 
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
@@ -815,7 +815,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characters** | **Array&lt;Integer&gt;**| The character IDs to fetch affiliations for. All characters must exist, or none will be returned. | 
+ **characters** | **Array&lt;Integer&gt;**| The character IDs to fetch affiliations for. All characters must exist, or none will be returned | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
 
 ### Return type

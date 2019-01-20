@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_killmails_recent**
-> Array&lt;GetCorporationsCorporationIdKillmailsRecent200Ok&gt; get_corporations_corporation_id_killmails_recent(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdKillmailsRecent200Ok&gt; get_corporations_corporation_id_killmails_recent(corporation_id, , opts)
 
 Get a corporation's recent kills and losses
 
@@ -101,7 +101,7 @@ opts = {
 
 begin
   #Get a corporation's recent kills and losses
-  result = api_instance.get_corporations_corporation_id_killmails_recent(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_killmails_recent(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling KillmailsApi->get_corporations_corporation_id_killmails_recent: #{e}"

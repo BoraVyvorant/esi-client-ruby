@@ -7,6 +7,9 @@ Method | HTTP request | Description
 [**get_characters_character_id_contracts**](ContractsApi.md#get_characters_character_id_contracts) | **GET** /v1/characters/{character_id}/contracts/ | Get contracts
 [**get_characters_character_id_contracts_contract_id_bids**](ContractsApi.md#get_characters_character_id_contracts_contract_id_bids) | **GET** /v1/characters/{character_id}/contracts/{contract_id}/bids/ | Get contract bids
 [**get_characters_character_id_contracts_contract_id_items**](ContractsApi.md#get_characters_character_id_contracts_contract_id_items) | **GET** /v1/characters/{character_id}/contracts/{contract_id}/items/ | Get contract items
+[**get_contracts_public_bids_contract_id**](ContractsApi.md#get_contracts_public_bids_contract_id) | **GET** /v1/contracts/public/bids/{contract_id}/ | Get public contract bids
+[**get_contracts_public_items_contract_id**](ContractsApi.md#get_contracts_public_items_contract_id) | **GET** /v1/contracts/public/items/{contract_id}/ | Get public contract items
+[**get_contracts_public_region_id**](ContractsApi.md#get_contracts_public_region_id) | **GET** /v1/contracts/public/{region_id}/ | Get public contracts
 [**get_corporations_corporation_id_contracts**](ContractsApi.md#get_corporations_corporation_id_contracts) | **GET** /v1/corporations/{corporation_id}/contracts/ | Get corporation contracts
 [**get_corporations_corporation_id_contracts_contract_id_bids**](ContractsApi.md#get_corporations_corporation_id_contracts_contract_id_bids) | **GET** /v1/corporations/{corporation_id}/contracts/{contract_id}/bids/ | Get corporation contract bids
 [**get_corporations_corporation_id_contracts_contract_id_items**](ContractsApi.md#get_corporations_corporation_id_contracts_contract_id_items) | **GET** /v1/corporations/{corporation_id}/contracts/{contract_id}/items/ | Get corporation contract items
@@ -200,8 +203,173 @@ Name | Type | Description  | Notes
 
 
 
+# **get_contracts_public_bids_contract_id**
+> Array&lt;GetContractsPublicBidsContractId200Ok&gt; get_contracts_public_bids_contract_id(contract_id, opts)
+
+Get public contract bids
+
+Lists bids on a public auction contract  ---  This route is cached for up to 300 seconds
+
+### Example
+```ruby
+# load the gem
+require 'esi-client-bvv'
+
+api_instance = ESI::ContractsApi.new
+
+contract_id = 56 # Integer | ID of a contract
+
+opts = { 
+  datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
+  page: 1, # Integer | Which page of results to return
+}
+
+begin
+  #Get public contract bids
+  result = api_instance.get_contracts_public_bids_contract_id(contract_id, opts)
+  p result
+rescue ESI::ApiError => e
+  puts "Exception when calling ContractsApi->get_contracts_public_bids_contract_id: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contract_id** | **Integer**| ID of a contract | 
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
+
+### Return type
+
+[**Array&lt;GetContractsPublicBidsContractId200Ok&gt;**](GetContractsPublicBidsContractId200Ok.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **get_contracts_public_items_contract_id**
+> Array&lt;GetContractsPublicItemsContractId200Ok&gt; get_contracts_public_items_contract_id(contract_id, opts)
+
+Get public contract items
+
+Lists items of a public contract  ---  This route is cached for up to 3600 seconds
+
+### Example
+```ruby
+# load the gem
+require 'esi-client-bvv'
+
+api_instance = ESI::ContractsApi.new
+
+contract_id = 56 # Integer | ID of a contract
+
+opts = { 
+  datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
+  page: 1, # Integer | Which page of results to return
+}
+
+begin
+  #Get public contract items
+  result = api_instance.get_contracts_public_items_contract_id(contract_id, opts)
+  p result
+rescue ESI::ApiError => e
+  puts "Exception when calling ContractsApi->get_contracts_public_items_contract_id: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contract_id** | **Integer**| ID of a contract | 
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
+
+### Return type
+
+[**Array&lt;GetContractsPublicItemsContractId200Ok&gt;**](GetContractsPublicItemsContractId200Ok.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **get_contracts_public_region_id**
+> Array&lt;GetContractsPublicRegionId200Ok&gt; get_contracts_public_region_id(region_id, opts)
+
+Get public contracts
+
+Returns a paginated list of all public contracts in the given region  ---  This route is cached for up to 1800 seconds
+
+### Example
+```ruby
+# load the gem
+require 'esi-client-bvv'
+
+api_instance = ESI::ContractsApi.new
+
+region_id = 56 # Integer | An EVE region id
+
+opts = { 
+  datasource: "tranquility", # String | The server name you would like data from
+  if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
+  page: 1, # Integer | Which page of results to return
+}
+
+begin
+  #Get public contracts
+  result = api_instance.get_contracts_public_region_id(region_id, opts)
+  p result
+rescue ESI::ApiError => e
+  puts "Exception when calling ContractsApi->get_contracts_public_region_id: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **region_id** | **Integer**| An EVE region id | 
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
+ **page** | **Integer**| Which page of results to return | [optional] [default to 1]
+
+### Return type
+
+[**Array&lt;GetContractsPublicRegionId200Ok&gt;**](GetContractsPublicRegionId200Ok.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 # **get_corporations_corporation_id_contracts**
-> Array&lt;GetCorporationsCorporationIdContracts200Ok&gt; get_corporations_corporation_id_contracts(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdContracts200Ok&gt; get_corporations_corporation_id_contracts(corporation_id, , opts)
 
 Get corporation contracts
 
@@ -230,7 +398,7 @@ opts = {
 
 begin
   #Get corporation contracts
-  result = api_instance.get_corporations_corporation_id_contracts(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_contracts(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling ContractsApi->get_corporations_corporation_id_contracts: #{e}"
@@ -263,7 +431,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_contracts_contract_id_bids**
-> Array&lt;GetCorporationsCorporationIdContractsContractIdBids200Ok&gt; get_corporations_corporation_id_contracts_contract_id_bids(contract_id, corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdContractsContractIdBids200Ok&gt; get_corporations_corporation_id_contracts_contract_id_bids(contract_id, corporation_id, , opts)
 
 Get corporation contract bids
 
@@ -294,7 +462,7 @@ opts = {
 
 begin
   #Get corporation contract bids
-  result = api_instance.get_corporations_corporation_id_contracts_contract_id_bids(contract_id, corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_contracts_contract_id_bids(contract_id, corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling ContractsApi->get_corporations_corporation_id_contracts_contract_id_bids: #{e}"
@@ -328,7 +496,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_contracts_contract_id_items**
-> Array&lt;GetCorporationsCorporationIdContractsContractIdItems200Ok&gt; get_corporations_corporation_id_contracts_contract_id_items(contract_id, corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdContractsContractIdItems200Ok&gt; get_corporations_corporation_id_contracts_contract_id_items(contract_id, corporation_id, , opts)
 
 Get corporation contract items
 
@@ -358,7 +526,7 @@ opts = {
 
 begin
   #Get corporation contract items
-  result = api_instance.get_corporations_corporation_id_contracts_contract_id_items(contract_id, corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_contracts_contract_id_items(contract_id, corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling ContractsApi->get_corporations_corporation_id_contracts_contract_id_items: #{e}"

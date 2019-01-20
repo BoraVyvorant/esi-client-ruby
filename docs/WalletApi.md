@@ -5,10 +5,10 @@ All URIs are relative to *https://esi.evetech.net*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_characters_character_id_wallet**](WalletApi.md#get_characters_character_id_wallet) | **GET** /v1/characters/{character_id}/wallet/ | Get a character&#39;s wallet balance
-[**get_characters_character_id_wallet_journal**](WalletApi.md#get_characters_character_id_wallet_journal) | **GET** /v4/characters/{character_id}/wallet/journal/ | Get character wallet journal
+[**get_characters_character_id_wallet_journal**](WalletApi.md#get_characters_character_id_wallet_journal) | **GET** /v5/characters/{character_id}/wallet/journal/ | Get character wallet journal
 [**get_characters_character_id_wallet_transactions**](WalletApi.md#get_characters_character_id_wallet_transactions) | **GET** /v1/characters/{character_id}/wallet/transactions/ | Get wallet transactions
 [**get_corporations_corporation_id_wallets**](WalletApi.md#get_corporations_corporation_id_wallets) | **GET** /v1/corporations/{corporation_id}/wallets/ | Returns a corporation&#39;s wallet balance
-[**get_corporations_corporation_id_wallets_division_journal**](WalletApi.md#get_corporations_corporation_id_wallets_division_journal) | **GET** /v3/corporations/{corporation_id}/wallets/{division}/journal/ | Get corporation wallet journal
+[**get_corporations_corporation_id_wallets_division_journal**](WalletApi.md#get_corporations_corporation_id_wallets_division_journal) | **GET** /v4/corporations/{corporation_id}/wallets/{division}/journal/ | Get corporation wallet journal
 [**get_corporations_corporation_id_wallets_division_transactions**](WalletApi.md#get_corporations_corporation_id_wallets_division_transactions) | **GET** /v1/corporations/{corporation_id}/wallets/{division}/transactions/ | Get corporation wallet transactions
 
 
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_wallets**
-> Array&lt;GetCorporationsCorporationIdWallets200Ok&gt; get_corporations_corporation_id_wallets(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdWallets200Ok&gt; get_corporations_corporation_id_wallets(corporation_id, , opts)
 
 Returns a corporation's wallet balance
 
@@ -225,7 +225,7 @@ opts = {
 
 begin
   #Returns a corporation's wallet balance
-  result = api_instance.get_corporations_corporation_id_wallets(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_wallets(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling WalletApi->get_corporations_corporation_id_wallets: #{e}"
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_wallets_division_journal**
-> Array&lt;GetCorporationsCorporationIdWalletsDivisionJournal200Ok&gt; get_corporations_corporation_id_wallets_division_journal(corporation_iddivision, opts)
+> Array&lt;GetCorporationsCorporationIdWalletsDivisionJournal200Ok&gt; get_corporations_corporation_id_wallets_division_journal(corporation_id, division, opts)
 
 Get corporation wallet journal
 
@@ -288,7 +288,7 @@ opts = {
 
 begin
   #Get corporation wallet journal
-  result = api_instance.get_corporations_corporation_id_wallets_division_journal(corporation_iddivision, opts)
+  result = api_instance.get_corporations_corporation_id_wallets_division_journal(corporation_id, division, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling WalletApi->get_corporations_corporation_id_wallets_division_journal: #{e}"
@@ -322,7 +322,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_wallets_division_transactions**
-> Array&lt;GetCorporationsCorporationIdWalletsDivisionTransactions200Ok&gt; get_corporations_corporation_id_wallets_division_transactions(corporation_iddivision, opts)
+> Array&lt;GetCorporationsCorporationIdWalletsDivisionTransactions200Ok&gt; get_corporations_corporation_id_wallets_division_transactions(corporation_id, division, opts)
 
 Get corporation wallet transactions
 
@@ -353,7 +353,7 @@ opts = {
 
 begin
   #Get corporation wallet transactions
-  result = api_instance.get_corporations_corporation_id_wallets_division_transactions(corporation_iddivision, opts)
+  result = api_instance.get_corporations_corporation_id_wallets_division_transactions(corporation_id, division, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling WalletApi->get_corporations_corporation_id_wallets_division_transactions: #{e}"

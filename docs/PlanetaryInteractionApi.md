@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_customs_offices**
-> Array&lt;GetCorporationsCorporationIdCustomsOffices200Ok&gt; get_corporations_corporation_id_customs_offices(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdCustomsOffices200Ok&gt; get_corporations_corporation_id_customs_offices(corporation_id, , opts)
 
 List corporation customs offices
 
@@ -163,7 +163,7 @@ opts = {
 
 begin
   #List corporation customs offices
-  result = api_instance.get_corporations_corporation_id_customs_offices(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_customs_offices(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling PlanetaryInteractionApi->get_corporations_corporation_id_customs_offices: #{e}"

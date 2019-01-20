@@ -38,7 +38,7 @@ character_id = 56 # Integer | An EVE character ID
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  include_completed: true, # BOOLEAN | Whether retrieve completed character industry jobs as well
+  include_completed: true, # BOOLEAN | Whether to retrieve completed character industry jobs. Only includes jobs from the past 90 days
   token: "token_example" # String | Access token to use if unable to set a header
 }
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
  **character_id** | **Integer**| An EVE character ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **include_completed** | **BOOLEAN**| Whether retrieve completed character industry jobs as well | [optional] 
+ **include_completed** | **BOOLEAN**| Whether to retrieve completed character industry jobs. Only includes jobs from the past 90 days | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
 
 ### Return type
@@ -139,11 +139,11 @@ Name | Type | Description  | Notes
 
 
 # **get_corporation_corporation_id_mining_extractions**
-> Array&lt;GetCorporationCorporationIdMiningExtractions200Ok&gt; get_corporation_corporation_id_mining_extractions(corporation_id, opts)
+> Array&lt;GetCorporationCorporationIdMiningExtractions200Ok&gt; get_corporation_corporation_id_mining_extractions(corporation_id, , opts)
 
 Moon extraction timers
 
-Extraction timers for all moon chunks being extracted by refineries belonging to a corporation.  ---  This route is cached for up to 1800 seconds  --- Requires one of the following EVE corporation role(s): Structure_manager
+Extraction timers for all moon chunks being extracted by refineries belonging to a corporation.  ---  This route is cached for up to 1800 seconds  --- Requires one of the following EVE corporation role(s): Station_Manager
 
 ### Example
 ```ruby
@@ -168,7 +168,7 @@ opts = {
 
 begin
   #Moon extraction timers
-  result = api_instance.get_corporation_corporation_id_mining_extractions(corporation_id, opts)
+  result = api_instance.get_corporation_corporation_id_mining_extractions(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling IndustryApi->get_corporation_corporation_id_mining_extractions: #{e}"
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporation_corporation_id_mining_observers**
-> Array&lt;GetCorporationCorporationIdMiningObservers200Ok&gt; get_corporation_corporation_id_mining_observers(corporation_id, opts)
+> Array&lt;GetCorporationCorporationIdMiningObservers200Ok&gt; get_corporation_corporation_id_mining_observers(corporation_id, , opts)
 
 Corporation mining observers
 
@@ -230,7 +230,7 @@ opts = {
 
 begin
   #Corporation mining observers
-  result = api_instance.get_corporation_corporation_id_mining_observers(corporation_id, opts)
+  result = api_instance.get_corporation_corporation_id_mining_observers(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling IndustryApi->get_corporation_corporation_id_mining_observers: #{e}"
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporation_corporation_id_mining_observers_observer_id**
-> Array&lt;GetCorporationCorporationIdMiningObserversObserverId200Ok&gt; get_corporation_corporation_id_mining_observers_observer_id(corporation_idobserver_id, opts)
+> Array&lt;GetCorporationCorporationIdMiningObserversObserverId200Ok&gt; get_corporation_corporation_id_mining_observers_observer_id(corporation_id, observer_id, opts)
 
 Observed corporation mining
 
@@ -294,7 +294,7 @@ opts = {
 
 begin
   #Observed corporation mining
-  result = api_instance.get_corporation_corporation_id_mining_observers_observer_id(corporation_idobserver_id, opts)
+  result = api_instance.get_corporation_corporation_id_mining_observers_observer_id(corporation_id, observer_id, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling IndustryApi->get_corporation_corporation_id_mining_observers_observer_id: #{e}"
@@ -328,11 +328,11 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_industry_jobs**
-> Array&lt;GetCorporationsCorporationIdIndustryJobs200Ok&gt; get_corporations_corporation_id_industry_jobs(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdIndustryJobs200Ok&gt; get_corporations_corporation_id_industry_jobs(corporation_id, , opts)
 
 List corporation industry jobs
 
-List industry jobs run by a corporation  ---  This route is cached for up to 300 seconds  --- Requires one of the following EVE corporation role(s): FactoryManager
+List industry jobs run by a corporation  ---  This route is cached for up to 300 seconds  --- Requires one of the following EVE corporation role(s): Factory_Manager
 
 ### Example
 ```ruby
@@ -351,14 +351,14 @@ corporation_id = 56 # Integer | An EVE corporation ID
 opts = { 
   datasource: "tranquility", # String | The server name you would like data from
   if_none_match: "if_none_match_example", # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  include_completed: false, # BOOLEAN | Whether retrieve completed industry jobs as well
+  include_completed: false, # BOOLEAN | Whether to retrieve completed corporation industry jobs. Only includes jobs from the past 90 days
   page: 1, # Integer | Which page of results to return
   token: "token_example" # String | Access token to use if unable to set a header
 }
 
 begin
   #List corporation industry jobs
-  result = api_instance.get_corporations_corporation_id_industry_jobs(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_industry_jobs(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling IndustryApi->get_corporations_corporation_id_industry_jobs: #{e}"
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
  **corporation_id** | **Integer**| An EVE corporation ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **include_completed** | **BOOLEAN**| Whether retrieve completed industry jobs as well | [optional] [default to false]
+ **include_completed** | **BOOLEAN**| Whether to retrieve completed corporation industry jobs. Only includes jobs from the past 90 days | [optional] [default to false]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
 

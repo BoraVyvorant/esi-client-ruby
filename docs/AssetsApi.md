@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**post_characters_character_id_assets_locations**](AssetsApi.md#post_characters_character_id_assets_locations) | **POST** /v2/characters/{character_id}/assets/locations/ | Get character asset locations
 [**post_characters_character_id_assets_names**](AssetsApi.md#post_characters_character_id_assets_names) | **POST** /v1/characters/{character_id}/assets/names/ | Get character asset names
 [**post_corporations_corporation_id_assets_locations**](AssetsApi.md#post_corporations_corporation_id_assets_locations) | **POST** /v2/corporations/{corporation_id}/assets/locations/ | Get corporation asset locations
-[**post_corporations_corporation_id_assets_names**](AssetsApi.md#post_corporations_corporation_id_assets_names) | **POST** /v1/corporations/{corporation_id}/assets/names/ | Get coporation asset names
+[**post_corporations_corporation_id_assets_names**](AssetsApi.md#post_corporations_corporation_id_assets_names) | **POST** /v1/corporations/{corporation_id}/assets/names/ | Get corporation asset names
 
 
 # **get_characters_character_id_assets**
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_assets**
-> Array&lt;GetCorporationsCorporationIdAssets200Ok&gt; get_corporations_corporation_id_assets(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdAssets200Ok&gt; get_corporations_corporation_id_assets(corporation_id, , opts)
 
 Get corporation assets
 
@@ -104,7 +104,7 @@ opts = {
 
 begin
   #Get corporation assets
-  result = api_instance.get_corporations_corporation_id_assets(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_assets(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling AssetsApi->get_corporations_corporation_id_assets: #{e}"
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 
 # **post_corporations_corporation_id_assets_locations**
-> Array&lt;PostCorporationsCorporationIdAssetsLocations200Ok&gt; post_corporations_corporation_id_assets_locations(corporation_iditem_ids, opts)
+> Array&lt;PostCorporationsCorporationIdAssetsLocations200Ok&gt; post_corporations_corporation_id_assets_locations(corporation_id, item_ids, opts)
 
 Get corporation asset locations
 
@@ -288,7 +288,7 @@ opts = {
 
 begin
   #Get corporation asset locations
-  result = api_instance.post_corporations_corporation_id_assets_locations(corporation_iditem_ids, opts)
+  result = api_instance.post_corporations_corporation_id_assets_locations(corporation_id, item_ids, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling AssetsApi->post_corporations_corporation_id_assets_locations: #{e}"
@@ -320,11 +320,11 @@ Name | Type | Description  | Notes
 
 
 # **post_corporations_corporation_id_assets_names**
-> Array&lt;PostCorporationsCorporationIdAssetsNames200Ok&gt; post_corporations_corporation_id_assets_names(corporation_iditem_ids, opts)
+> Array&lt;PostCorporationsCorporationIdAssetsNames200Ok&gt; post_corporations_corporation_id_assets_names(corporation_id, item_ids, opts)
 
-Get coporation asset names
+Get corporation asset names
 
-Return names for a set of item ids, which you can get from corporation assets endpoint. Only valid for items that can customize names, like containers or ships.  ---  Requires one of the following EVE corporation role(s): Director
+Return names for a set of item ids, which you can get from corporation assets endpoint. Only valid for items that can customize names, like containers or ships  ---  Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```ruby
@@ -348,8 +348,8 @@ opts = {
 }
 
 begin
-  #Get coporation asset names
-  result = api_instance.post_corporations_corporation_id_assets_names(corporation_iditem_ids, opts)
+  #Get corporation asset names
+  result = api_instance.post_corporations_corporation_id_assets_names(corporation_id, item_ids, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling AssetsApi->post_corporations_corporation_id_assets_names: #{e}"

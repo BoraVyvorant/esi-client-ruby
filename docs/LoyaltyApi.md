@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 
 # **get_loyalty_stores_corporation_id_offers**
-> Array&lt;GetLoyaltyStoresCorporationIdOffers200Ok&gt; get_loyalty_stores_corporation_id_offers(corporation_id, opts)
+> Array&lt;GetLoyaltyStoresCorporationIdOffers200Ok&gt; get_loyalty_stores_corporation_id_offers(corporation_id, , opts)
 
 List loyalty store offers
 
@@ -91,7 +91,7 @@ opts = {
 
 begin
   #List loyalty store offers
-  result = api_instance.get_loyalty_stores_corporation_id_offers(corporation_id, opts)
+  result = api_instance.get_loyalty_stores_corporation_id_offers(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling LoyaltyApi->get_loyalty_stores_corporation_id_offers: #{e}"

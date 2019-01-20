@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_orders**
-> Array&lt;GetCorporationsCorporationIdOrders200Ok&gt; get_corporations_corporation_id_orders(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdOrders200Ok&gt; get_corporations_corporation_id_orders(corporation_id, , opts)
 
 List open orders from a corporation
 
@@ -169,7 +169,7 @@ opts = {
 
 begin
   #List open orders from a corporation
-  result = api_instance.get_corporations_corporation_id_orders(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_orders(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling MarketApi->get_corporations_corporation_id_orders: #{e}"
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_orders_history**
-> Array&lt;GetCorporationsCorporationIdOrdersHistory200Ok&gt; get_corporations_corporation_id_orders_history(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdOrdersHistory200Ok&gt; get_corporations_corporation_id_orders_history(corporation_id, , opts)
 
 List historical orders from a corporation
 
@@ -231,7 +231,7 @@ opts = {
 
 begin
   #List historical orders from a corporation
-  result = api_instance.get_corporations_corporation_id_orders_history(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_orders_history(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling MarketApi->get_corporations_corporation_id_orders_history: #{e}"
@@ -490,7 +490,7 @@ require 'esi-client-bvv'
 
 api_instance = ESI::MarketApi.new
 
-order_type = "all" # String | Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and sell orders.
+order_type = "all" # String | Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and sell orders
 
 region_id = 56 # Integer | Return orders in this region
 
@@ -514,7 +514,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **order_type** | **String**| Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and sell orders. | [default to all]
+ **order_type** | **String**| Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and sell orders | [default to all]
  **region_id** | **Integer**| Return orders in this region | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 

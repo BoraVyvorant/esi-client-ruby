@@ -23,13 +23,13 @@ Method | HTTP request | Description
 [**get_corporations_corporation_id_standings**](CorporationApi.md#get_corporations_corporation_id_standings) | **GET** /v1/corporations/{corporation_id}/standings/ | Get corporation standings
 [**get_corporations_corporation_id_starbases**](CorporationApi.md#get_corporations_corporation_id_starbases) | **GET** /v1/corporations/{corporation_id}/starbases/ | Get corporation starbases (POSes)
 [**get_corporations_corporation_id_starbases_starbase_id**](CorporationApi.md#get_corporations_corporation_id_starbases_starbase_id) | **GET** /v1/corporations/{corporation_id}/starbases/{starbase_id}/ | Get starbase (POS) detail
-[**get_corporations_corporation_id_structures**](CorporationApi.md#get_corporations_corporation_id_structures) | **GET** /v2/corporations/{corporation_id}/structures/ | Get corporation structures
+[**get_corporations_corporation_id_structures**](CorporationApi.md#get_corporations_corporation_id_structures) | **GET** /v3/corporations/{corporation_id}/structures/ | Get corporation structures
 [**get_corporations_corporation_id_titles**](CorporationApi.md#get_corporations_corporation_id_titles) | **GET** /v1/corporations/{corporation_id}/titles/ | Get corporation titles
 [**get_corporations_npccorps**](CorporationApi.md#get_corporations_npccorps) | **GET** /v1/corporations/npccorps/ | Get npc corporations
 
 
 # **get_corporations_corporation_id**
-> GetCorporationsCorporationIdOk get_corporations_corporation_id(corporation_id, opts)
+> GetCorporationsCorporationIdOk get_corporations_corporation_id(corporation_id, , opts)
 
 Get corporation information
 
@@ -51,7 +51,7 @@ opts = {
 
 begin
   #Get corporation information
-  result = api_instance.get_corporations_corporation_id(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id: #{e}"
@@ -82,7 +82,7 @@ No authorization required
 
 
 # **get_corporations_corporation_id_alliancehistory**
-> Array&lt;GetCorporationsCorporationIdAlliancehistory200Ok&gt; get_corporations_corporation_id_alliancehistory(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdAlliancehistory200Ok&gt; get_corporations_corporation_id_alliancehistory(corporation_id, , opts)
 
 Get alliance history
 
@@ -104,7 +104,7 @@ opts = {
 
 begin
   #Get alliance history
-  result = api_instance.get_corporations_corporation_id_alliancehistory(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_alliancehistory(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_alliancehistory: #{e}"
@@ -135,7 +135,7 @@ No authorization required
 
 
 # **get_corporations_corporation_id_blueprints**
-> Array&lt;GetCorporationsCorporationIdBlueprints200Ok&gt; get_corporations_corporation_id_blueprints(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdBlueprints200Ok&gt; get_corporations_corporation_id_blueprints(corporation_id, , opts)
 
 Get corporation blueprints
 
@@ -164,7 +164,7 @@ opts = {
 
 begin
   #Get corporation blueprints
-  result = api_instance.get_corporations_corporation_id_blueprints(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_blueprints(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_blueprints: #{e}"
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_containers_logs**
-> Array&lt;GetCorporationsCorporationIdContainersLogs200Ok&gt; get_corporations_corporation_id_containers_logs(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdContainersLogs200Ok&gt; get_corporations_corporation_id_containers_logs(corporation_id, , opts)
 
 Get all corporation ALSC logs
 
@@ -226,7 +226,7 @@ opts = {
 
 begin
   #Get all corporation ALSC logs
-  result = api_instance.get_corporations_corporation_id_containers_logs(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_containers_logs(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_containers_logs: #{e}"
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_divisions**
-> GetCorporationsCorporationIdDivisionsOk get_corporations_corporation_id_divisions(corporation_id, opts)
+> GetCorporationsCorporationIdDivisionsOk get_corporations_corporation_id_divisions(corporation_id, , opts)
 
 Get corporation divisions
 
@@ -287,7 +287,7 @@ opts = {
 
 begin
   #Get corporation divisions
-  result = api_instance.get_corporations_corporation_id_divisions(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_divisions(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_divisions: #{e}"
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_facilities**
-> Array&lt;GetCorporationsCorporationIdFacilities200Ok&gt; get_corporations_corporation_id_facilities(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdFacilities200Ok&gt; get_corporations_corporation_id_facilities(corporation_id, , opts)
 
 Get corporation facilities
 
@@ -347,7 +347,7 @@ opts = {
 
 begin
   #Get corporation facilities
-  result = api_instance.get_corporations_corporation_id_facilities(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_facilities(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_facilities: #{e}"
@@ -379,7 +379,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_icons**
-> GetCorporationsCorporationIdIconsOk get_corporations_corporation_id_icons(corporation_id, opts)
+> GetCorporationsCorporationIdIconsOk get_corporations_corporation_id_icons(corporation_id, , opts)
 
 Get corporation icon
 
@@ -401,7 +401,7 @@ opts = {
 
 begin
   #Get corporation icon
-  result = api_instance.get_corporations_corporation_id_icons(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_icons(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_icons: #{e}"
@@ -432,7 +432,7 @@ No authorization required
 
 
 # **get_corporations_corporation_id_medals**
-> Array&lt;GetCorporationsCorporationIdMedals200Ok&gt; get_corporations_corporation_id_medals(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdMedals200Ok&gt; get_corporations_corporation_id_medals(corporation_id, , opts)
 
 Get corporation medals
 
@@ -461,7 +461,7 @@ opts = {
 
 begin
   #Get corporation medals
-  result = api_instance.get_corporations_corporation_id_medals(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_medals(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_medals: #{e}"
@@ -494,7 +494,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_medals_issued**
-> Array&lt;GetCorporationsCorporationIdMedalsIssued200Ok&gt; get_corporations_corporation_id_medals_issued(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdMedalsIssued200Ok&gt; get_corporations_corporation_id_medals_issued(corporation_id, , opts)
 
 Get corporation issued medals
 
@@ -523,7 +523,7 @@ opts = {
 
 begin
   #Get corporation issued medals
-  result = api_instance.get_corporations_corporation_id_medals_issued(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_medals_issued(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_medals_issued: #{e}"
@@ -556,7 +556,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_members**
-> Array&lt;Integer&gt; get_corporations_corporation_id_members(corporation_id, opts)
+> Array&lt;Integer&gt; get_corporations_corporation_id_members(corporation_id, , opts)
 
 Get corporation members
 
@@ -584,7 +584,7 @@ opts = {
 
 begin
   #Get corporation members
-  result = api_instance.get_corporations_corporation_id_members(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_members(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_members: #{e}"
@@ -616,7 +616,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_members_limit**
-> Integer get_corporations_corporation_id_members_limit(corporation_id, opts)
+> Integer get_corporations_corporation_id_members_limit(corporation_id, , opts)
 
 Get corporation member limit
 
@@ -644,7 +644,7 @@ opts = {
 
 begin
   #Get corporation member limit
-  result = api_instance.get_corporations_corporation_id_members_limit(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_members_limit(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_members_limit: #{e}"
@@ -676,7 +676,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_members_titles**
-> Array&lt;GetCorporationsCorporationIdMembersTitles200Ok&gt; get_corporations_corporation_id_members_titles(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdMembersTitles200Ok&gt; get_corporations_corporation_id_members_titles(corporation_id, , opts)
 
 Get corporation's members' titles
 
@@ -704,7 +704,7 @@ opts = {
 
 begin
   #Get corporation's members' titles
-  result = api_instance.get_corporations_corporation_id_members_titles(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_members_titles(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_members_titles: #{e}"
@@ -736,7 +736,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_membertracking**
-> Array&lt;GetCorporationsCorporationIdMembertracking200Ok&gt; get_corporations_corporation_id_membertracking(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdMembertracking200Ok&gt; get_corporations_corporation_id_membertracking(corporation_id, , opts)
 
 Track corporation members
 
@@ -764,7 +764,7 @@ opts = {
 
 begin
   #Track corporation members
-  result = api_instance.get_corporations_corporation_id_membertracking(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_membertracking(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_membertracking: #{e}"
@@ -796,7 +796,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_roles**
-> Array&lt;GetCorporationsCorporationIdRoles200Ok&gt; get_corporations_corporation_id_roles(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdRoles200Ok&gt; get_corporations_corporation_id_roles(corporation_id, , opts)
 
 Get corporation member roles
 
@@ -824,7 +824,7 @@ opts = {
 
 begin
   #Get corporation member roles
-  result = api_instance.get_corporations_corporation_id_roles(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_roles(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_roles: #{e}"
@@ -856,7 +856,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_roles_history**
-> Array&lt;GetCorporationsCorporationIdRolesHistory200Ok&gt; get_corporations_corporation_id_roles_history(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdRolesHistory200Ok&gt; get_corporations_corporation_id_roles_history(corporation_id, , opts)
 
 Get corporation member roles history
 
@@ -885,7 +885,7 @@ opts = {
 
 begin
   #Get corporation member roles history
-  result = api_instance.get_corporations_corporation_id_roles_history(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_roles_history(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_roles_history: #{e}"
@@ -918,7 +918,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_shareholders**
-> Array&lt;GetCorporationsCorporationIdShareholders200Ok&gt; get_corporations_corporation_id_shareholders(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdShareholders200Ok&gt; get_corporations_corporation_id_shareholders(corporation_id, , opts)
 
 Get corporation shareholders
 
@@ -947,7 +947,7 @@ opts = {
 
 begin
   #Get corporation shareholders
-  result = api_instance.get_corporations_corporation_id_shareholders(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_shareholders(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_shareholders: #{e}"
@@ -980,7 +980,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_standings**
-> Array&lt;GetCorporationsCorporationIdStandings200Ok&gt; get_corporations_corporation_id_standings(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdStandings200Ok&gt; get_corporations_corporation_id_standings(corporation_id, , opts)
 
 Get corporation standings
 
@@ -1009,7 +1009,7 @@ opts = {
 
 begin
   #Get corporation standings
-  result = api_instance.get_corporations_corporation_id_standings(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_standings(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_standings: #{e}"
@@ -1042,7 +1042,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_starbases**
-> Array&lt;GetCorporationsCorporationIdStarbases200Ok&gt; get_corporations_corporation_id_starbases(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdStarbases200Ok&gt; get_corporations_corporation_id_starbases(corporation_id, , opts)
 
 Get corporation starbases (POSes)
 
@@ -1071,7 +1071,7 @@ opts = {
 
 begin
   #Get corporation starbases (POSes)
-  result = api_instance.get_corporations_corporation_id_starbases(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_starbases(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_starbases: #{e}"
@@ -1104,7 +1104,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_starbases_starbase_id**
-> GetCorporationsCorporationIdStarbasesStarbaseIdOk get_corporations_corporation_id_starbases_starbase_id(corporation_idstarbase_id, system_id, opts)
+> GetCorporationsCorporationIdStarbasesStarbaseIdOk get_corporations_corporation_id_starbases_starbase_id(corporation_id, starbase_id, system_id, opts)
 
 Get starbase (POS) detail
 
@@ -1136,7 +1136,7 @@ opts = {
 
 begin
   #Get starbase (POS) detail
-  result = api_instance.get_corporations_corporation_id_starbases_starbase_id(corporation_idstarbase_id, system_id, opts)
+  result = api_instance.get_corporations_corporation_id_starbases_starbase_id(corporation_id, starbase_id, system_id, opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_starbases_starbase_id: #{e}"
@@ -1170,11 +1170,11 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_structures**
-> Array&lt;GetCorporationsCorporationIdStructures200Ok&gt; get_corporations_corporation_id_structures(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdStructures200Ok&gt; get_corporations_corporation_id_structures(corporation_id, , opts)
 
 Get corporation structures
 
-Get a list of corporation structures. This route's version includes the changes to structures detailed in this blog: https://www.eveonline.com/article/upwell-2.0-structures-changes-coming-on-february-13th  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): StationManager
+Get a list of corporation structures. This route's version includes the changes to structures detailed in this blog: https://www.eveonline.com/article/upwell-2.0-structures-changes-coming-on-february-13th  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Station_Manager
 
 ### Example
 ```ruby
@@ -1201,7 +1201,7 @@ opts = {
 
 begin
   #Get corporation structures
-  result = api_instance.get_corporations_corporation_id_structures(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_structures(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_structures: #{e}"
@@ -1236,7 +1236,7 @@ Name | Type | Description  | Notes
 
 
 # **get_corporations_corporation_id_titles**
-> Array&lt;GetCorporationsCorporationIdTitles200Ok&gt; get_corporations_corporation_id_titles(corporation_id, opts)
+> Array&lt;GetCorporationsCorporationIdTitles200Ok&gt; get_corporations_corporation_id_titles(corporation_id, , opts)
 
 Get corporation titles
 
@@ -1264,7 +1264,7 @@ opts = {
 
 begin
   #Get corporation titles
-  result = api_instance.get_corporations_corporation_id_titles(corporation_id, opts)
+  result = api_instance.get_corporations_corporation_id_titles(corporation_id, , opts)
   p result
 rescue ESI::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_titles: #{e}"

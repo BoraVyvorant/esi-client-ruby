@@ -16,5 +16,6 @@ Name | Type | Description | Notes
 **tax_rate** | **Float** | tax_rate number | 
 **ticker** | **String** | the short name of the corporation | 
 **url** | **String** | url string | [optional] 
+**war_eligible** | **BOOLEAN** | war_eligible boolean | [optional] 
 
 
